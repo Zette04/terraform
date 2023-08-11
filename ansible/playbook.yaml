@@ -2,15 +2,15 @@
   hosts: hosts
   tasks:
    - name: Ping my hosts
-     ansible.builtin.ping:
+     ping:
    - name: Print message
-     ansible.builtin.debug:
+     debug:
        msg: Hello world
    - name: update host
-     ansible.builtin.command:
+     command:
        cmd: sudo yum update -y
    - name: print again
-     ansible.builtin.debug:
+     debug:
        msg: hello
    - name: create directory
      file:
