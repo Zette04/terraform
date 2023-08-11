@@ -1,0 +1,18 @@
+- name: My first play
+  hosts: hosts
+  tasks:
+   - name: Ping my hosts
+     ansible.builtin.ping:
+   - name: Print message
+     ansible.builtin.debug:
+       msg: Hello world
+   - name: update host
+     ansible.builtin.command:
+       cmd: sudo yum update -y
+   - name: print again
+     ansible.builtin.debug:
+       msg: hello
+   - name: create directory
+     file:
+       path: /home/ec2-user/mary
+       state: directory
